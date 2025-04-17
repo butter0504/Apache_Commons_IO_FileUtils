@@ -1185,9 +1185,9 @@ public class FileUtils {
      */
     public static void deleteDirectory(final File directory) throws IOException {
         Objects.requireNonNull(directory, "directory");
-         if (!directory.exists()) {
-             return;
-         }
+        // if (!directory.exists()) {
+            //  return;
+        //  }
         //修改后（注入缺陷，移除存在性检查）
         //...其余代码保持不变...
         if (!isSymlink(directory)) {
